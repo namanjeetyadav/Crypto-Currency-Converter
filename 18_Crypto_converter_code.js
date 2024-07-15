@@ -1,6 +1,6 @@
 const cryptoList = {
-    BTC: "Bitcoin",
     ETH: "Ethereum",
+    BTC: "Bitcoin",
     USDT: "Tether",
     BNB: "BNB",
     USDC: "USD Coin",
