@@ -19,7 +19,18 @@ for (let select of dropdown) {
     }
 }
 
-btn.addEventListener
+btn.addEventListener("click")
+
+let amount = document.querySelector(".amount imput")
+let amountValue = amount.value;
+if (amountValue === "" || amountValue < 0){
+    amountValue = 1;
+ amount.value = "1";
+}
+
+
+
+
 
 
 
