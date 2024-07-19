@@ -1,8 +1,11 @@
-const BASE_URL = ""
+const BASE_URL = "https://api.coincap.io/v2/assets"
 
 const dropdown = document.querySelectorAll(".all-select select")
 
 const btn = document.querySelector("form button")
+
+const fromCryptoCurr = document.querySelector(".from select")
+const toCryptoCurr = document.querySelector(".from select")
 
 for (let select of dropdown) {
     for (let cryptoCurr in cryptoList) {
@@ -28,7 +31,14 @@ if (amountValue === "" || amountValue < 0){
  amount.value = "1";
 }
 
+console.log(fromCryptoCurr.value, toCryptoCurr.value);
 
+const URL = `${BASE_URL}/$fromCryptoCurr.value.toLowerCase().json`
+
+let response = await fetch(URL);
+let data = await response.json();
+let rates = (data[fromCryptoCurr.value.toLowerCase()])
+console.log(rates);
 
 
 
