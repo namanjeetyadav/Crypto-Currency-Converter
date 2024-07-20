@@ -38,7 +38,7 @@ const URL = `${BASE_URL}/$fromCryptoCurr.value.toLowerCase().json`
 let response = await fetch(URL);
 let data = await response.json();
 let rates = (data[fromCryptoCurr.value.toLowerCase()])
-console.log(rates);
+// console.log(rates);
 
 
 
