@@ -42,32 +42,30 @@ if (amountValue === "" || amountValue < 0.00000001) {
     amount.value = "1";
 }
 
-// console.log( );
-    let a = fromCryptoCurr [fromCryptoCurr.selectedIndex].text.toLowerCase();
-    console.log(a);
 
-// [fromCryptoCurr.selectedIndex].text.toLowerCase()
+    let a = fromCryptoCurr [fromCryptoCurr.selectedIndex].text.toLowerCase();
+    let b = toCryptoCurr [toCryptoCurr.selectedIndex].text.toLowerCase();
+    console.log(a, b);
+
+
 
 const URL = `${BASE_URL}/${a}`;
+const URL2 = `${BASE_URL}/${b}`;
 
 let response = await fetch(URL);
 let data = await response.json();
-let priceUsd = (data[fromCryptoCurr.value.toLowerCase()][toCryptoCurr.value.toLowerCase()]);
-console.log(rates);
-let finalAmt = amountValue * priceUsd;
+let priceUsd = data.data.priceUsd;
+ 
+
+let response2 = await fetch(URL2);
+let data2 = await response2.json();
+let priceUsd2 = data2.data.priceUsd;
+
+console.log(`Price in USD: ${priceUsd}`);
+let finalAmt = amountValue * priceUsd / priceUsd2;
 
 
-message.innerHTML = `${amountValue} ${fromCryptoCurr} = ${finalAmt} ${toCryptoCurr.value}`
+message.innerHTML = `${amountValue} ${fromCryptoCurr.value} = ${finalAmt} ${toCryptoCurr.value}`
 });
 
 
-const cryptoList = {
-    ETH: "Ethereum",
-    BTC: "Bitcoin",
-    USDT: "Tether",
-    BNB: "BNB"
-};
-
-for (let key in cryptoList) {
-    console.log(cryptoList[key].toLowerCase());
-}
