@@ -85,5 +85,5 @@ btn.addEventListener("click", async (evt) => {
     console.log(finalAmt)
 
 
-    message.innerHTML = `${amountValue} ${fromCryptoCurr.value} = ${finalAmt} ${toCryptoCurr.value}`
+    message.innerHTML = `${amountValue} ${fromCryptoCurr.value.toUpperCase()} = ${finalAmt} ${toCryptoCurr.value.toUpperCase()}`
 });
