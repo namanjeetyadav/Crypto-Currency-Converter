@@ -15,10 +15,10 @@ for (let select of dropdown) {
         let newOption = document.createElement("option")
         newOption.innerText = cryptoList[cryptoCurr].toUpperCase();
         newOption.value = cryptoCurr;
-        if (select.name === "from" && cryptoCurr === "BTC") {
+        if (select.name === "from" && cryptoCurr === "tether") {
             newOption.selected = "selected"
         }
-        else if (select.name === "to" && cryptoCurr === "ETH") {
+        else if (select.name === "to" && cryptoCurr === "ethereum") {
             newOption.selected = "selected"
         }
         select.append(newOption);
