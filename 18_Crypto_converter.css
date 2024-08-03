@@ -94,3 +94,27 @@ form p {
 .enter-amount {
     margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 1098px) {
+    .main-container {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .main-container {
+        width: 70vw;
+        /* padding: 0.5rem; */
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .main-container {
+        width: 70vw;
+
+    }
+
+    .all-select {
+        margin: 1.5rem 0rem;
+    }
+}

@@ -1,6 +1,8 @@
-let apiUrl = fetch('https://api.coincap.io/v2/assets/ethereum')
-apiUrl.then((value1) => {
-    return value1.json()
-}).then((value2) => {
-    console.log(value2)
-})
+document.addEventListener('DOMContentLoaded', function() {
+    const downloadLink = document.getElementById('download-cv');
+
+    downloadLink.addEventListener('click', function() {
+        alert('Your download will start shortly.');
+    });
+});
+
