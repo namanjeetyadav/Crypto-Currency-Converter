@@ -48,13 +48,9 @@ btn.addEventListener("click", async (evt) => {
 
 
     const URL = `${BASE_URL}`;
-
-
     let response = await fetch(URL);
     let data = await response.json();
     
-   
-
     //  code start here 
 
     let obj1 = data.data.find(obj => obj.id === a);
@@ -72,10 +68,8 @@ btn.addEventListener("click", async (evt) => {
 
     //  code end here 
 
-    // console.log(`Price in USD: ${priceUsd}`);
     let finalAmt = amountValue * priceUsd1 / priceUsd2;
-    console.log(finalAmt)
-
+    console.log(finalAmt);
 
     message.innerHTML = `${amountValue} ${fromCryptoCurr.value.toUpperCase()} = ${finalAmt} ${toCryptoCurr.value.toUpperCase()}`
 });
